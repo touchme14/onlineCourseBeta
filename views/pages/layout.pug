@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+head
+  title FE Open Course
+  
+  link(rel='stylesheet', href='/asset/css/style.css') 
+body
+  .wrapper
+    header.header
+      .logo-container
+        img.logo(src='asset/img/christmate-high-resolution-logo.png', alt='Logo FE Open Course')
+        span.brand FE Open Course
+      nav.navigation
+        ul
+          li
+            a(href='#') Kelas
+          li
+            a(href='#') Sertifikat Terprogram
+          li
+            a(href='#') Tentang
+      .auth-buttons
+        a(href='/register')
+          button.daftar Daftar
+        a(href='/login')
+          button.masuk Masuk
+    block content

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .login-container
+        .content
+            .login-box
+                h2.login-title Masuk
+                if error 
+                    p.error= error
+                form(method='post', action='/login') 
+                    input(type='hidden', name='_csrf', value=csrfToken) 
+                    .input-group
+                        label(for='email') Email
+                        input(type='email', name='email', id='email', placeholder='Email', required)
+                    .input-group
+                        label(for='password') Password
+                        input(type='password', name='password', id='password', placeholder='Password', required)
+                    button.login-button(type='submit') Masuk
+                .login-options
+                    a(href='/register') Tidak punya akun?
+                    span.separator |
+                    a(href='/forgot-password') Lupa password?

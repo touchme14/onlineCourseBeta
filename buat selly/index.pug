@@ -1,0 +1,66 @@
+extends layout
+
+block content
+
+  // Your HTML content here (header, main, footer, etc.)
+  main
+    .header
+      .logo-container
+        img.logo(src='/images/logo.jpg', alt='Logo FE Open Course')
+        span.brand FE Open Course
+      nav.navigation
+        ul
+          li
+            a(href='#') Kelas
+          li
+            a(href='#') Sertifikat Terprogram
+          li
+            a(href='#') Tentang
+      .auth-buttons
+        button.daftar(onclick="window.location.href='/register'") Daftar
+        button.masuk(onclick="window.location.href='/login'") Masuk
+    section.hero
+      .container
+        h1 Bangun keterampilan pertama Anda
+        p dalam kelas kami
+        
+    section.features
+      .container
+        h2 Kenapa Harus FE Open Course?
+        .feature-grid
+          .feature
+            img(src='/images/icon.jpg', alt='Icon')
+          .feature
+            img(src='/images/icon.jpg', alt='Icon')
+          .feature
+            img(src='/images/icon.jpg', alt='Icon')
+          .feature
+            img(src='/images/icon.jpg', alt='Icon')
+          .feature
+            img(src='/images/icon.jpg', alt='Icon')
+          .feature
+            img(src='/images/icon.jpg', alt='Icon')
+    section.courses
+      .container
+        h2 Semua Kelas
+        .course-grid(id='course-grid')
+          // Data kelas akan ditampilkan di sini
+        .view-more
+          a(href='/courses') Lihat Semua Kelas
+    section.collaboration
+      .container
+        h2 Kerja Sama Kami
+        .collaboration-logos
+          img(src='/images/logo.jpg', alt='Logo 1')
+          img(src='/images/logo.jpg', alt='Logo 2')
+          img(src='/images/logo.jpg', alt='Logo 3')
+    section.newsletter
+      .container
+        h2 Tulis Email Anda untuk Mendapat Informasi Kelas Terbaru dari Kami
+        form
+          input(type='email', placeholder='Tulis Email Anda')
+          button Subscribe
+    footer
+      .container
+        p FE Open Course
+

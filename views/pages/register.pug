@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  .login-container
+    .content
+      .login-box
+        h2.login-title Daftar
+        if error
+          p.error= error
+        form(method='post', action='/register')
+          input(type='hidden', name='_csrf', value=csrfToken)
+
+          .input-group
+            label(for='full_name') Nama Lengkap
+            input(type='text', name='full_name', id='full_name', placeholder='Nama Lengkap', required)
+
+          .input-group
+            label(for='email') Email
+            input(type='email', name='email', id='email', placeholder='Email', required)
+
+          .input-group
+            label(for='password') Password
+            input(type='password', name='password', id='password', placeholder='Password', required)
+
+          // --- Input Tambahan ---
+          .input-group
+            label(for='nidn_number') NIDN
+            input(type='text', name='nidn_number', id='nidn_number', placeholder='NIDN')
+
+          .input-group
+            label(for='phone_number') Nomor Telepon
+            input(type='text', name='phone_number', id='phone_number', placeholder='Nomor Telepon')
+
+          .input-group
+            label(for='position') Posisi
+            input(type='text', name='position', id='position', placeholder='Posisi')
+
+          // Hapus input untuk role
+
+          button.login-button(type='submit') Daftar
+
+        .login-options
+          span Sudah punya akun?
+          a(href='/login') Masuk
